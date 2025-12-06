@@ -5,9 +5,6 @@ order: 4
 ---
 
 
-
-## About
-
 I am a junior undergraduate majoring in AI Convergence at Soongsil University.  
 
 ### Research Interests
