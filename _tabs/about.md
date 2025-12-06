@@ -21,5 +21,5 @@ B.S.  in AI Convergence (Mar. 2022 - Present)
 
 - mail: `sihyun2988@gmail.com`
 - GitHub: https://github.com/sihyun2988
-- CV: <a href="{{ '/workspaces/sihyun2988.github.io/assets/lib/CV_sihyeon_25.pdf' | relative_url }}" target="_blank" rel="noopener">cv pdf</a>
+- CV: <a href="{{ '/assets/files/CV_sihyeon_25.pdf' | relative_url }}" target="_blank" rel="noopener">cv pdf</a>
 
