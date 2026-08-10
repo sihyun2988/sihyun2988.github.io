@@ -1,201 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Sihyeon Lee</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Sihyeon Lee, AI, LLM, Soongsil University">
-  <meta name="author" content="Sihyeon Lee">
-  <meta name="description" content="Sihyeon Lee, an undergraduate student in AI Convergence at Soongsil University.">
-  <meta property="og:title" content="Sihyeon Lee">
-  <meta property="og:description" content="Undergraduate student in AI Convergence at Soongsil University.">
-  <meta property="og:url" content="https://sihyun2988.github.io/">
-  <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans|Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/img/favicons/favicon.ico">
-  <style>
-    html {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      height: 100%;
-      margin: 0;
-      color: #272727;
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    a:hover { text-decoration: underline; }
-
-    hr {
-      height: 0;
-      margin: 0;
-      border: 0;
-      border-top: 1px solid rgba(0, 0, 0, .1);
-      border-bottom: 1px solid rgba(255, 255, 255, .3);
-    }
-
-    .wrapper { min-height: 100%; }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .navbar { padding: 50px 0; }
-
-    #author-name {
-      display: inline-block;
-      float: left;
-      color: #272727;
-      font-size: 30px;
-    }
-
-    .navbar-ul {
-      display: inline-block;
-      float: right;
-      margin: 0 0 0 20px;
-      padding: 5px 0;
-    }
-
-    .nav-list {
-      display: inline-block;
-      margin: 0 5px 0 10px;
-      list-style-type: none;
-    }
-
-    .clear { clear: both; }
-
-    .content { padding-top: 12px; }
-
-    .content h2 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 1.5em;
-      line-height: 1.25;
-    }
-
-    .content p { margin: 0 0 16px; }
-
-    .content ul { padding: 0 20px; }
-
-    .content ul > li { margin: 5px 0; }
-
-    .profile-picture {
-      position: relative;
-      float: right;
-      width: 150px;
-      height: 150px;
-      margin: -10px 0 0 15px;
-      border-radius: 50%;
-    }
-
-    .profile-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      background: #607d9f;
-      font-family: "Open Sans", sans-serif;
-      font-size: 38px;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-
-    @media (max-width: 800px) {
-      .container {
-        max-width: 600px;
-        transition: .3s ease all;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .container { max-width: 83%; }
-      .navbar-ul { margin-top: 5px; }
-    }
-
-    @media (max-width: 500px) {
-      .navbar {
-        padding: 50px 0 0;
-        text-align: center;
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Sihyeon Lee - AI Convergence undergraduate researcher interested in trustworthy large language models, AI bias, reinforcement learning, and machine reasoning."
+    >
+    <title>Sihyeon Lee</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+    <style>
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
 
-      #author-name {
-        float: none;
-        width: 100%;
+      body {
+        margin: 0;
+        font-family: "Noto Sans TC", sans-serif;
+        height: 100%;
       }
 
-      #navlist {
+      a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .header-inner,
+      main {
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .header-inner {
+        padding: 50px 0;
+      }
+
+      .site-title {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 400;
+        color: #272727;
+        display: inline-block;
+        float: left;
+      }
+
+      .top-nav {
+        display: inline-block;
+        float: right;
+        margin: 0 0 0 20px;
+        padding: 5px 0;
+      }
+
+      .nav-separator {
+        margin: 0 5px 0 10px;
+      }
+
+      main {
+        clear: both;
+      }
+
+      .biography-layout {
         display: block;
-        float: none;
-        width: 100%;
-        margin: 0;
-        padding: 10px 0;
-        text-align: center;
       }
 
-      #navlist .nav-list {
-        float: none;
-        margin: 0;
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <div class="navbar container">
-      <a id="author-name" href="/">Sihyeon Lee</a>
-      <ul id="navlist" class="navbar-ul">
-        <li class="nav-list"><a target="_blank" rel="noopener noreferrer" href="assets/files/CV_sihyeon_25.pdf">CV</a></li>
-        /
-        <li class="nav-list"><a target="_blank" rel="noopener noreferrer" href="https://github.com/sihyun2988">GitHub</a></li>
-      </ul>
-    </div>
-    <div class="clear"></div>
+
+      .profile-photo {
+        position: relative;
+        margin: -10px 0 0 15px;
+        float: right;
+        object-fit: contain;
+        background: #ffffff;
+      }
+
+      ul {
+        padding: 0 20px;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+
+      .date {
+        font-weight: 700;
+      }
+
+      @media (max-width: 800px) {
+        .header-inner {
+          max-width: 600px;
+          transition: 0.3s ease all;
+        }
+        main {
+          max-width: 600px;
+          transition: 0.3s ease all;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .header-inner,
+        main {
+          max-width: 83%;
+        }
+        .top-nav { margin-top: 5px; }
+      }
+
+      @media (max-width: 500px) {
+        .header-inner {
+          text-align: center;
+          padding: 50px 0 0;
+        }
+        .site-title {
+          width: 100%;
+          float: none;
+        }
+        .top-nav {
+          padding: 10px 0;
+          margin: 0;
+          display: block;
+          float: none;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">Sihyeon Lee</h1>
+        <nav class="top-nav" aria-label="Primary navigation">
+          <a href="assets/files/CV_sihyeon_26.pdf" target="_blank" rel="noopener">CV</a>
+          <span class="nav-separator" aria-hidden="true">/</span>
+          <a href="https://sites.google.com/view/ssu-nlp/home" target="_blank" rel="noopener">NLP LAB</a>
+        </nav>
+      </div>
+    </header>
+    <div style="clear: both"></div>
     <hr>
 
-    <div class="container content">
-      <h2>Biography</h2>
+    <main>
+      <section aria-labelledby="biography-heading">
+        <h2 id="biography-heading">Biography</h2>
+        <div class="biography-layout">
+          <img class="profile-photo" src="assets/img/profile.jpg" alt="Portrait of Sihyeon Lee">
+          <div>
+            <p>
+              <a href="mailto:sihyun2988@gmail.com">Sihyeon Lee</a> is an M.S. student in the
+              School of AI Software at Soongsil University. She is currently conducting research at the
+              <a href="https://sites.google.com/view/ssu-nlp/home" target="_blank" rel="noopener">Natural Language Processing Lab</a>.
+              Her research interests include large language models (LLMs), reinforcement learning, AI alignment,
+              and LLM reasoning, with a particular focus on analyzing biases in LLMs
+              and improving their fairness and reliability. For more details, please see her
+              <a href="assets/files/CV_sihyeon_26.pdf" target="_blank" rel="noopener">CV</a>.
+            </p>
+          </div>
 
-      <div class="profile-picture profile-placeholder" role="img" aria-label="Sihyeon Lee profile placeholder">SL</div>
-      <p>
-        <a href="https://github.com/sihyun2988">Sihyeon Lee</a> is an undergraduate student majoring in
-        <a href="https://aix.ssu.ac.kr/" target="_blank" rel="noopener noreferrer">AI Convergence</a> at
-        <a href="https://ssu.ac.kr/" target="_blank" rel="noopener noreferrer">Soongsil University</a>.
-        His research interests include large language model (LLM) agents, LLM reasoning, and
-        self-improving AI systems. For more details, please see his
-        <a href="assets/files/CV_sihyeon_25.pdf" target="_blank" rel="noopener noreferrer">CV</a>.
-      </p>
+        </div>
+      </section>
 
-      <h2>Research Interests</h2>
-      <ul>
-        <li>LLM Agents</li>
-        <li>LLM Reasoning</li>
-        <li>Self-improving AI Systems</li>
-      </ul>
+      <section aria-labelledby="interests-heading">
+        <h2 id="interests-heading">Research Interests</h2>
+        <ul>
+          <li>Large Language Models (LLMs)</li>
+          <li>Bias in LLMs</li>
+          <li>AI Alignment</li>
+          <li>Reinforcement Learning</li>
+        </ul>
+      </section>
 
-      <h2>Education</h2>
-      <ul>
-        <li><strong>2022.03 - Present</strong>: B.S. in AI Convergence, Soongsil University</li>
-      </ul>
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <ul>
+          <li>
+            <span class="date">2027.03 - 2028.08 (Expected):</span>
+            M.S. in Software, Soongsil University (Advisor: Prof. Chanjun Park)
+          </li>
+          <li>
+            <span class="date">2022.03 - 2027.02 (Expected):</span>
+            B.S. in AI Software, Soongsil University
+          </li>
+        </ul>
+      </section>
 
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:sihyun2988@gmail.com">sihyun2988@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/sihyun2988" target="_blank" rel="noopener noreferrer">sihyun2988</a></li>
-      </ul>
+      <section aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experiences</h2>
+        <ul>
+          <li>
+            <span class="date">2025.12 - Present:</span>
+            <a href="https://sites.google.com/view/ssu-nlp/home" target="_blank" rel="noopener">Natural Language Processing Lab</a>,
+            Soongsil University, Research Assistant
+          </li>
+        </ul>
+      </section>
 
-      <br><br><br>
-    </div>
-  </div>
-</body>
+      <section aria-labelledby="links-heading">
+        <h2 id="links-heading">Additional Links</h2>
+        <ul>
+          <li><a href="https://github.com/sihyun2988" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=JXy719sAAAAJ&amp;hl=ko" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="mailto:sihyun2988@gmail.com">Email</a></li>
+        </ul>
+      </section>
+    </main>
+
+  </body>
 </html>
