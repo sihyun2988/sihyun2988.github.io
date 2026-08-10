@@ -1,247 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Sihyeon Lee</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sihyeon Lee — AI Convergence undergraduate at Soongsil University interested in LLM agents, reasoning, and self-improving AI systems.">
+  <meta name="keywords" content="Sihyeon Lee, AI, LLM, Soongsil University">
   <meta name="author" content="Sihyeon Lee">
+  <meta name="description" content="Sihyeon Lee, an undergraduate student in AI Convergence at Soongsil University.">
   <meta property="og:title" content="Sihyeon Lee">
-  <meta property="og:description" content="AI Convergence undergraduate at Soongsil University">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Undergraduate student in AI Convergence at Soongsil University.">
   <meta property="og:url" content="https://sihyun2988.github.io/">
-  <title>Sihyeon Lee</title>
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans|Roboto&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/img/favicons/favicon.ico">
   <style>
-    :root {
-      --ink: #24292f;
-      --muted: #59636e;
-      --line: #d8dee4;
-      --accent: #2457a6;
-      --paper: #ffffff;
-      --soft: #f6f8fa;
+    html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
+      height: 100%;
       margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #272727;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     a {
-      color: var(--accent);
+      color: #0077cc;
       text-decoration: none;
     }
 
     a:hover { text-decoration: underline; }
 
-    .page {
-      width: min(920px, calc(100% - 40px));
-      margin: 0 auto;
+    hr {
+      height: 0;
+      margin: 0;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
     }
 
-    header {
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 38px;
+    .wrapper { min-height: 100%; }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
     }
 
-    nav {
-      min-height: 64px;
+    .navbar { padding: 50px 0; }
+
+    #author-name {
+      display: inline-block;
+      float: left;
+      color: #272727;
+      font-size: 30px;
+    }
+
+    .navbar-ul {
+      display: inline-block;
+      float: right;
+      margin: 0 0 0 20px;
+      padding: 5px 0;
+    }
+
+    .nav-list {
+      display: inline-block;
+      margin: 0 5px 0 10px;
+      list-style-type: none;
+    }
+
+    .clear { clear: both; }
+
+    .content { padding-top: 12px; }
+
+    .content h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      line-height: 1.25;
+    }
+
+    .content p { margin: 0 0 16px; }
+
+    .content ul { padding: 0 20px; }
+
+    .content ul > li { margin: 5px 0; }
+
+    .profile-picture {
+      position: relative;
+      float: right;
+      width: 150px;
+      height: 150px;
+      margin: -10px 0 0 15px;
+      border-radius: 50%;
+    }
+
+    .profile-placeholder {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .name {
-      color: var(--ink);
-      font-size: 1.16rem;
-      font-weight: 700;
-      letter-spacing: -.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 20px;
-      font-size: .94rem;
-    }
-
-    main { padding-bottom: 64px; }
-
-    .intro {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 36px;
-      align-items: start;
-      margin-bottom: 44px;
-    }
-
-    .portrait {
-      width: 150px;
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
+      justify-content: center;
       color: #fff;
-      background: linear-gradient(145deg, #173a70, #3777c7);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.5rem;
-      letter-spacing: .06em;
-      box-shadow: 0 8px 24px rgba(23, 58, 112, .16);
+      background: #607d9f;
+      font-family: "Open Sans", sans-serif;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: 2px;
     }
 
-    h1 {
-      margin: -8px 0 2px;
-      font: 700 2.25rem/1.25 Georgia, "Times New Roman", serif;
-      letter-spacing: -.025em;
+    @media (max-width: 800px) {
+      .container {
+        max-width: 600px;
+        transition: .3s ease all;
+      }
     }
 
-    .korean-name {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 1rem;
+    @media (max-width: 650px) {
+      .container { max-width: 83%; }
+      .navbar-ul { margin-top: 5px; }
     }
 
-    .role {
-      margin: 0 0 14px;
-      font-size: 1.08rem;
-    }
+    @media (max-width: 500px) {
+      .navbar {
+        padding: 50px 0 0;
+        text-align: center;
+      }
 
-    .quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 18px;
-    }
+      #author-name {
+        float: none;
+        width: 100%;
+      }
 
-    .quick-links a {
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 5px 11px;
-      color: var(--ink);
-      background: var(--soft);
-      font-size: .9rem;
-    }
+      #navlist {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+      }
 
-    section { margin-top: 38px; }
-
-    h2 {
-      margin: 0 0 14px;
-      padding-bottom: 7px;
-      border-bottom: 1px solid var(--line);
-      font: 700 1.38rem/1.35 Georgia, "Times New Roman", serif;
-    }
-
-    p { margin: 0 0 12px; }
-
-    ul {
-      margin: 8px 0 0;
-      padding-left: 22px;
-    }
-
-    li { margin: 6px 0; }
-
-    .date {
-      display: inline-block;
-      min-width: 160px;
-      color: var(--muted);
-      font-variant-numeric: tabular-nums;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 22px 0 30px;
-      color: var(--muted);
-      font-size: .86rem;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .page { width: min(100% - 28px, 920px); }
-      nav { align-items: flex-start; padding: 16px 0; }
-      .nav-links { gap: 10px 15px; }
-      .intro { grid-template-columns: 1fr; gap: 22px; }
-      .portrait { width: 112px; }
-      h1 { font-size: 1.9rem; }
-      .date { display: block; min-width: 0; }
+      #navlist .nav-list {
+        float: none;
+        margin: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="page" aria-label="Main navigation">
-      <a class="name" href="#top">Sihyeon Lee</a>
-      <div class="nav-links">
-        <a href="#biography">Biography</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top" class="page">
-    <div class="intro">
-      <div class="portrait" role="img" aria-label="Sihyeon Lee initials">SL</div>
-      <div>
-        <h1>Sihyeon Lee</h1>
-        <p class="korean-name">이시현</p>
-        <p class="role">Undergraduate Student in AI Convergence<br>
-          <a href="https://ssu.ac.kr/" target="_blank" rel="noopener noreferrer">Soongsil University</a>
-        </p>
-        <div class="quick-links" aria-label="Profile links">
-          <a href="mailto:sihyun2988@gmail.com">Email</a>
-          <a href="https://github.com/sihyun2988" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="assets/files/CV_sihyeon_25.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-        </div>
-      </div>
+  <div class="wrapper">
+    <div class="navbar container">
+      <a id="author-name" href="/">Sihyeon Lee</a>
+      <ul id="navlist" class="navbar-ul">
+        <li class="nav-list"><a target="_blank" rel="noopener noreferrer" href="assets/files/CV_sihyeon_25.pdf">CV</a></li>
+        /
+        <li class="nav-list"><a target="_blank" rel="noopener noreferrer" href="https://github.com/sihyun2988">GitHub</a></li>
+      </ul>
     </div>
+    <div class="clear"></div>
+    <hr>
 
-    <section id="biography">
+    <div class="container content">
       <h2>Biography</h2>
-      <p>
-        I am an undergraduate student majoring in AI Convergence at Soongsil University.
-        My research interests center on large language models, particularly autonomous agents,
-        reasoning, and systems that can improve through their own experience.
-      </p>
-    </section>
 
-    <section id="research">
+      <div class="profile-picture profile-placeholder" role="img" aria-label="Sihyeon Lee profile placeholder">SL</div>
+      <p>
+        <a href="https://github.com/sihyun2988">Sihyeon Lee</a> is an undergraduate student majoring in
+        <a href="https://aix.ssu.ac.kr/" target="_blank" rel="noopener noreferrer">AI Convergence</a> at
+        <a href="https://ssu.ac.kr/" target="_blank" rel="noopener noreferrer">Soongsil University</a>.
+        His research interests include large language model (LLM) agents, LLM reasoning, and
+        self-improving AI systems. For more details, please see his
+        <a href="assets/files/CV_sihyeon_25.pdf" target="_blank" rel="noopener noreferrer">CV</a>.
+      </p>
+
       <h2>Research Interests</h2>
       <ul>
         <li>LLM Agents</li>
         <li>LLM Reasoning</li>
         <li>Self-improving AI Systems</li>
       </ul>
-    </section>
 
-    <section id="education">
       <h2>Education</h2>
       <ul>
-        <li>
-          <span class="date">Mar. 2022 – Present</span>
-          B.S. in AI Convergence, Soongsil University
-        </li>
+        <li><strong>2022.03 - Present</strong>: B.S. in AI Convergence, Soongsil University</li>
       </ul>
-    </section>
 
-    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:sihyun2988@gmail.com">sihyun2988@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/sihyun2988" target="_blank" rel="noopener noreferrer">github.com/sihyun2988</a></p>
-    </section>
-  </main>
+      <ul>
+        <li>Email: <a href="mailto:sihyun2988@gmail.com">sihyun2988@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/sihyun2988" target="_blank" rel="noopener noreferrer">sihyun2988</a></li>
+      </ul>
 
-  <footer>
-    <div class="page">&copy; <span id="year"></span> Sihyeon Lee</div>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+      <br><br><br>
+    </div>
+  </div>
 </body>
 </html>
